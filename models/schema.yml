@@ -1,12 +1,29 @@
 version: 2
 
 sources:
-  - name: Pc
+  - name: pc
     schema: Steam_data
     tables:
       - name: steam
         identifier: steam_data
         description: Pc games data
 
-  - name:     
+
+
+  - name: sales_data
+    schema: video_games_data
+    tables:
+
+      - name: sales
+        identifier: video_games_data
+        description: The sales data (copies in millions)
+        
+
+  - name: igdb
+    schema: igdb_data
+    tables:
+
+      - name: main
+        identifier: data_200K
+        description: main dataset with multi-platform reviews
         
