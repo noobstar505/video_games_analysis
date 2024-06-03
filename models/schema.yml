@@ -26,14 +26,46 @@ sources:
       - name: main
         identifier: data_200K
         description: main dataset with multi-platform reviews
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
         
 
       - name: categories
         identifier: category_mapping
         description: A map of the different categories of games
 
+        columns:
+          - name: category
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
+
       
       
       - name: company
         identifier: companies
         description: A map of the companies in the involved companies dataset
+        
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
+
+
+      - name: involved_company
+        identifier: involved_companies
+        description: A map of the publishers and developers
+
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
