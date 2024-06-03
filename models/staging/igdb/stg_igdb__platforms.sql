@@ -6,28 +6,15 @@ source as (
 
 ),
 
-renamed as (
+cleaned as (
 
     select
         id,
-        alternative_name,
         category,
-        created_at,
-        name,
-        platform_logo,
-        slug,
-        updated_at,
-        url,
-        versions,
-        websites,
-        checksum,
-        generation,
-        platform_family,
-        abbreviation,
-        summary
+        name,                
 
     from source
 
 )
 
-select * from renamed
+select * from cleaned
