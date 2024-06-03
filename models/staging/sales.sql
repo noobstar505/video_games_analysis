@@ -1,5 +1,5 @@
 -- generating model for source('sales_data', 'sales')...
-source AS (
+with source AS (
     SELECT * FROM {{SOURCE("sales_data", "sales")}}
 ),
 
