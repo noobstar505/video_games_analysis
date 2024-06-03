@@ -1,12 +1,12 @@
 version: 2
 
 sources:
-  - name: raw
+  - name: Pc
     schema: Steam_data
     tables:
       - name: steam
         identifier: steam_data
         description: Pc games data
 
-      
+  - name:     
         
