@@ -1,1 +1,24 @@
 -- generating model for source('sales_data', 'sales')...
+source AS (
+    SELECT * FROM {{SOURCE("sales_data", "sales")}}
+),
+
+cleaned as (
+    SELECT 
+    title,
+    console AS platform,
+    genre,
+    developer,
+    critic_score,
+    total_sales,
+    na_sales,
+    jp_sales,
+    pal_sales AS emea_sales,
+    other_sales,
+    release_date
+
+
+FROM source
+)
+
+SELECT * FROM cleaned
