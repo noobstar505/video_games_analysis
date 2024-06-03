@@ -10,14 +10,14 @@ cleaned AS (
 
     SELECT
         title,
-        console AS platform
+        console AS platform,
         genre,
         developer,
         critic_score,
         total_sales,
         na_sales,
         jp_sales,
-        pal_sales AS emea_sales
+        pal_sales AS emea_sales,
         other_sales,
         release_date
         
