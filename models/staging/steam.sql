@@ -4,7 +4,7 @@ with
 
 source as (
 
-    select * from {{ source('raw', 'steam') }}
+    select * from {{ source('pc', 'steam') }}
 
 ),
 
