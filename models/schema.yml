@@ -70,5 +70,23 @@ sources:
               - unique
               - not_null
 
-      
-      
+      - name: genre
+        identifier: genres
+        description: A map of the genres
+
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
+
+      - name: platforms
+        description: a map of the platforms
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
+
