@@ -6,26 +6,24 @@ source as (
 
 ),
 
-renamed as (
+cleaned AS (
 
-    select
-        img,
+    SELECT
         title,
-        console,
+        console AS platform,
         genre,
-        publisher,
         developer,
         critic_score,
         total_sales,
         na_sales,
         jp_sales,
-        pal_sales,
+        pal_sales AS emea_sales,
         other_sales,
-        release_date,
-        last_update
+        release_date
+        
 
-    from source
+    FROM source
 
 )
 
-select * from renamed
+SELECT * FROM cleaned

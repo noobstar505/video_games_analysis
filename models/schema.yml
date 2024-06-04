@@ -70,5 +70,44 @@ sources:
               - unique
               - not_null
 
-      
-      
+      - name: genre
+        identifier: genres
+        description: A map of the genres
+
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
+
+      - name: platforms
+        description: a map of the platforms
+
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
+
+      - name: perspective
+        identifier: player_perspectives
+        description: player perspective map
+
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
+
+      - name: themes
+        description: a map of the themes
+
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
