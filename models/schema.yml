@@ -121,3 +121,13 @@ sources:
             tests:
               - unique
               - not_null
+      
+      - name: franchise
+        description: a map of the franchise the game belongs to
+
+        columns:
+          - name: id
+            description: the primary key of this table
+            tests:
+              - unique
+              - not_null
