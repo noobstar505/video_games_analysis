@@ -11,7 +11,7 @@ renamed as (
     select
         id,
         category,
-        first_release_date,
+        first_release_date AS first_release_date_int,
         game_modes,
         genres,
         name,
