@@ -6,19 +6,14 @@ source as (
 
 ),
 
-renamed as (
+cleaned as (
 
     select
-        id,
-        created_at,
-        name,
-        slug,
-        updated_at,
-        url,
-        checksum
+        id,       
+        name
 
     from source
 
 )
 
-select * from renamed
+select * from cleaned
