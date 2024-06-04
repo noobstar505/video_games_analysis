@@ -1,6 +1,9 @@
-SELECT SUM(jp_sales) AS jp_sales, SUM(na_sales) AS na_sales,
- SUM(emea_sales) AS emea_sales, SUM(other_sales) AS other_sales,
- SUM(total_sales) AS total_sales
+SELECT 
+ROUND(SUM(jp_sales),2) AS jp_sales, 
+ROUND(SUM(na_sales),2) AS na_sales,
+ROUND(SUM(emea_sales),2) AS emea_sales,
+ROUND(SUM(other_sales),2) AS other_sales,
+ROUND(SUM(total_sales),2) AS total_sales
 ,CASE
 
   WHEN critic_score >= 0 AND critic_score <=1 THEN "1"
@@ -16,4 +19,5 @@ SELECT SUM(jp_sales) AS jp_sales, SUM(na_sales) AS na_sales,
   ELSE "no_critic_score"
 END AS critic_review_score
 FROM  {{ ref('stg_sales_data__sales') }}
-GROUP BY critic_review_score 
+GROUP BY critic_review_score
+ORDER BY total_sales DESC
