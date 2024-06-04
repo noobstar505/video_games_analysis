@@ -6,51 +6,30 @@ source as (
 
 ),
 
-renamed as (
+clean_steam as (
 
     select
-        appid,
         name,
-        release date,
-        estimated owners,
-        peak ccu,
-        required age,
+        `release date` AS release_date,
+        `estimated owners` AS num_owners,
+        `peak ccu` AS peak_ccu,
+        `required age` AS age_certificate,
         price,
-        dlc count,
-        about the game,
-        supported languages,
-        full audio languages,
+        `dlc count` AS dlc_count,
         reviews,
-        header image,
-        website,
-        support url,
-        support email,
-        windows,
-        mac,
-        linux,
-        metacritic score,
-        metacritic url,
-        user score,
+        `metacritic score`,
         positive,
         negative,
-        score rank,
-        achievements,
-        recommendations,
-        notes,
-        average playtime forever,
-        average playtime two weeks,
-        median playtime forever,
-        median playtime two weeks,
+        `average playtime forever`,
+        `average playtime two weeks`,
+        `median playtime forever`,
+        `median playtime two weeks`,
         developers,
         publishers,
-        categories,
         genres,
-        tags,
-        screenshots,
-        movies
-
+    
     from source
 
 )
 
-select * from renamed
+select * from clean_steam
