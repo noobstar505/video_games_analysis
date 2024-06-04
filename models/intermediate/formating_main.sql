@@ -1,3 +1,6 @@
+{{ config(materialized='table') }}
+
+
 WITH formatted_data AS(
 
 SELECT id,
