@@ -1,7 +1,10 @@
 WITH developer_merged AS( 
 
-SELECT main.name,
+SELECT main.id,
+main.name,
 main.aggregated_rating,
+main.franchise,
+main.release_date,
 companies.developer,
 companies.publisher,
 companies.country,
