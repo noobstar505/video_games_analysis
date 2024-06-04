@@ -46,3 +46,4 @@ WHERE
 )
 
 SELECT * FROM filtered_data
+WHERE category = 0
