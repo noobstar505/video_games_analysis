@@ -1,3 +1,6 @@
+{{ config(materialized='table') }}
+
+
 WITH formatted_data AS(
 
 SELECT id,
@@ -36,13 +39,5 @@ date_formatted AS(
    
 
 
-), filtered_data AS(
-
-SELECT * 
-FROM date_formatted
-
-WHERE
-    EXTRACT(YEAR FROM release_date) >= 2000 
 )
-
-SELECT * FROM filtered_data
+SELECT * FROM date_formatted WHERE category = 0
