@@ -39,14 +39,5 @@ date_formatted AS(
    
 
 
-), filtered_data AS(
-
-SELECT * 
-FROM date_formatted
-
-WHERE
-    EXTRACT(YEAR FROM release_date) >= 2000 
 )
-
-SELECT * FROM filtered_data
-WHERE category = 0
+SELECT * FROM date_formatted WHERE category = 0
