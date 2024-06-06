@@ -19,7 +19,7 @@ clean_steam as (
         price,
         `dlc count` AS dlc_count,
         reviews,
-        `metacritic score`,
+        `metacritic score` AS metacritic_score,
         positive,
         negative,
         `average playtime forever`,

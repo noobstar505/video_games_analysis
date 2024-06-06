@@ -8,7 +8,11 @@ sources:
         identifier: steam_data
         description: Pc games data
 
-
+  - name: Steam_data
+    schema: dbt_jr
+    tables:
+      - name: metacritic_score
+        description: Count of games under % category review score
 
   - name: sales_data
     schema: video_games_data
