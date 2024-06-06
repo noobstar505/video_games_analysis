@@ -1,5 +1,7 @@
 with 
 
+{{ config(materialized='table') }}
+
 source as (
 
     select * from {{ source('pc', 'steam') }}
