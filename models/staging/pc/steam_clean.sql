@@ -1,3 +1,5 @@
+-- Removing date number and ',' from release_date string 
+
 {{ config(materialized='table') }}
 
 WITH 

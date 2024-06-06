@@ -1,9 +1,13 @@
+-- Converting String into Date data type
+
+{{ config(materialized='table') }}
+
 with 
 
     release_date as ( 
         select 
         name
-        , PARSE_DATE('%h %e, %Y', release_date) AS date_date
+        , PARSE_DATE('%b %Y', release_date) AS date_date
         , num_owners
         , peak_ccu
         , age_certificate
@@ -18,7 +22,7 @@ with
         , developers
         , publishers
         , genres
-        FROM {{ ref('stg_pc__steam') }}
+        FROM {{ ref('steam_clean') }}
     
      )
 
