@@ -136,8 +136,8 @@ sources:
               - unique
               - not_null
 
-  - name: mart
-    schema: Final_mart
+  - name: int
+    schema: intermediate
     tables:
       - name: main_game_modes
         description: game modes table
