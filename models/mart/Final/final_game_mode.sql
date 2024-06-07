@@ -1,5 +1,3 @@
-
-
 SELECT
          id,
         name,
@@ -11,4 +9,4 @@ SELECT
         updated_game_modes AS game_modes, 
         IF(franchise_name IS NULL, 'Not a franchise',franchise_name) AS franchise
 
-FROM {{ ref('stg_mart__main_game_modes') }}
+FROM {{ ref('stg_int__mode') }}

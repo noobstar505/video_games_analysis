@@ -139,11 +139,11 @@ sources:
   - name: int
     schema: intermediate
     tables:
-      - name: main_game_modes
+      - name: mode
+        identifier: main_game_modes
         description: game modes table
       - name: main_genre
         description: genre table
       - name: main_platforms
         description: platforms table
-      - name: main_theme
-        description: themes table
+    

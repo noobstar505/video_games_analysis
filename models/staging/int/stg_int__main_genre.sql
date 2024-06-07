@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('mart', 'main_genre') }}
+    select * from {{ source('int', 'main_genre') }}
 
 ),
 
