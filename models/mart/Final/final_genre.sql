@@ -1,4 +1,3 @@
-
 SELECT
         id,
         name,
@@ -13,4 +12,4 @@ SELECT
         company_name,
         IF(franchise_name IS NULL, 'Not a franchise',franchise_name) AS franchise
 
-FROM {{ ref('stg_mart__main_genre') }}
+FROM {{ ref('stg_int__main_genre') }}

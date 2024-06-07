@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('mart', 'main_game_modes') }}
+    select * from {{ source('int', 'main_platforms') }}
 
 ),
 
@@ -13,11 +13,15 @@ renamed as (
         name,
         release_date,
         aggregated_rating,
+        genres,
+        game_modes,
+        platforms,
+        themes,
         developer,
+        publisher,
         country,
         company_name,
-        franchise_name,
-        updated_game_modes
+        franchise_name
 
     from source
 
