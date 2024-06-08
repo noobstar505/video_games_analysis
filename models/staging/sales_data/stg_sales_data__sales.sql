@@ -11,7 +11,7 @@ cleaned AS (
     SELECT
         title,
         console AS platform,
-        genre,
+        IF(REGEXP_CONTAINS(LOWER(genre), 'adventure'),'Adventure',genre) AS genres,
         developer,
         critic_score,
         total_sales,
